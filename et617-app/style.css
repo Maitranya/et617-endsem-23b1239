@@ -1,0 +1,68 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f6f4ef; color: #1f2937; font-size: 17px; line-height: 1.5;
+}
+.top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #1e3a5f; color: #fff; }
+.brand { font-weight: 700; font-size: 18px; }
+main { max-width: 720px; margin: 0 auto; padding: 12px 16px 24px; }
+h2 { font-size: 22px; margin: 8px 0 12px; }
+.session { max-width: 720px; margin: 8px auto 0; padding: 0 16px; font-size: 14px; color: #4b5563; }
+.session-row { display: flex; justify-content: space-between; }
+.bar { height: 8px; background: #e5e7eb; border-radius: 6px; overflow: hidden; margin-top: 4px; }
+.bar .fill { height: 100%; width: 0; background: #2563eb; transition: width .4s; }
+.bar.time .fill { background: #059669; }
+.bar.time.over .fill { background: #d97706; }
+
+.card { background: #fff; border-radius: 12px; padding: 16px; margin: 12px 0; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.agent { display: flex; gap: 10px; align-items: flex-start; background: #fff; border-left: 5px solid var(--c); border-radius: 10px; padding: 12px; margin: 10px 0; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.agent .avatar { font-size: 26px; line-height: 1; }
+.agent .who { font-weight: 700; color: var(--c); font-size: 14px; }
+.agent .relies { font-size: 13px; color: #6b7280; margin-top: 6px; font-style: italic; }
+.agent.typing .msg::after { content: " …"; }
+
+.source { background: #fffbeb; border: 2px dashed #d6b46a; border-radius: 10px; padding: 12px; }
+.source .meta { font-size: 14px; color: #6b5a2b; margin-top: 8px; }
+
+button, .btn { font: inherit; cursor: pointer; border: 0; border-radius: 10px; padding: 12px 16px; background: #2563eb; color: #fff; font-weight: 600; min-height: 48px; }
+button:disabled { background: #9ca3af; cursor: not-allowed; }
+button.ghost { background: transparent; color: inherit; border: 2px solid currentColor; }
+button.small { padding: 6px 10px; min-height: 36px; font-size: 14px; }
+button.secondary { background: #e5e7eb; color: #1f2937; }
+.option { display: block; width: 100%; text-align: left; background: #fff; color: #1f2937; border: 2px solid #d1d5db; margin: 8px 0; font-weight: 500; }
+.option.selected { border-color: #2563eb; background: #eff6ff; }
+.option.good { border-color: #059669; background: #ecfdf5; }
+.option.retry { border-color: #d97706; background: #fffbeb; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.actions .grow { flex: 1; }
+
+.feedback { border-radius: 10px; padding: 12px; margin: 10px 0; }
+.feedback.good { background: #ecfdf5; border: 1px solid #a7f3d0; }
+.feedback.retry { background: #fffbeb; border: 1px solid #fcd34d; }   /* amber, never red: L5 anxiety */
+.feedback.info { background: #eff6ff; border: 1px solid #bfdbfe; }
+
+.sortcard { display: flex; flex-direction: column; gap: 6px; padding: 10px; border: 2px solid #d1d5db; border-radius: 10px; margin: 8px 0; background: #fff; }
+.sortcard.good { border-color: #059669; }
+.sortcard.retry { border-color: #d97706; }
+.sortcard select { font: inherit; padding: 10px; border-radius: 8px; border: 1px solid #9ca3af; min-height: 44px; }
+
+.views { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 560px) { .views { grid-template-columns: 1fr; } }
+.views .vs { text-align: center; font-weight: 700; color: #6b7280; }
+
+textarea { width: 100%; min-height: 120px; font: inherit; padding: 10px; border-radius: 10px; border: 2px solid #d1d5db; }
+.starters { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.chip { background: #eef2ff; color: #3730a3; border-radius: 20px; padding: 6px 12px; font-size: 14px; min-height: 36px; font-weight: 500; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 10px; background: #e5e7eb; }
+.tag.fallback { background: #fde68a; }
+.tag.ai { background: #bfdbfe; }
+
+.notes { max-width: 720px; margin: 0 auto 10px; padding: 0 16px; font-size: 14px; color: #374151; }
+.notes summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.notes ul { padding-left: 18px; margin: 4px 0; }
+
+table.log { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.log td, table.log th { border-bottom: 1px solid #e5e7eb; padding: 6px; text-align: left; }
+footer { text-align: center; font-size: 14px; color: #4b5563; padding: 14px; border-top: 1px solid #e5e7eb; background: #fff; }
+footer a { color: #2563eb; }
+b.hl, strong { background: #fef3c7; padding: 0 3px; border-radius: 3px; }

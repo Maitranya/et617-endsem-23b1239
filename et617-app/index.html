@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1857 Detectives · ET 617 · 23B1239</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">🕵️ 1857 Detectives</div>
+    <button id="pauseBtn" class="ghost small" title="Save and stop">⏸ Pause &amp; save</button>
+  </header>
+
+  <!-- C4: 10-minute session bar, visible on every screen -->
+  <div class="session" id="sessionBar">
+    <div class="session-row">
+      <span id="stepLabel">Step 0 of 6</span>
+      <span id="timeLabel">⏱ 0:00 / 10:00</span>
+    </div>
+    <div class="bar"><div class="fill" id="stepFill"></div></div>
+    <div class="bar time"><div class="fill" id="timeFill"></div></div>
+  </div>
+
+  <main id="app"></main>
+
+  <details class="notes" id="notesBox">
+    <summary>🗒️ Team notes (what the agents tell each other)</summary>
+    <ul id="notesList"></ul>
+  </details>
+
+  <footer>
+    ET 617 End-Sem · Roll no. <b>23B1239</b> · P3-T5-L5-C4 ·
+    <a href="#" id="aboutLink">About</a>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
